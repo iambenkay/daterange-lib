@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: "Build Project but Publish only if pushed to master"
+    name: "Build Project"
     runs-on: ubuntu-latest
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -25,5 +25,3 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn format .
       - run: yarn rollup
-      - if: ${{ github.event_name == 'push' }}
-        run: npm publish
