@@ -1,6 +1,6 @@
 {
   "name": "daterange-lib",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/cjs/index.js",
   "repository": "git@github.com:iambenkay/daterange-for-react.git",
   "author": "Benjamin Chibuzor-Orie <benjamincath@gmail.com>",
