@@ -27,5 +27,5 @@ jobs:
       - run: git config user.name "bump-bot"
       - run: git config user.email "bump-bot@bump.bot"
       - run: npm version ${{ inputs.tag }}
-      - run: git push origin ${{ $GITHUB_REF }}
+      - run: git push origin ${{ github.ref_name }}
 
