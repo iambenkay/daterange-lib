@@ -1,4 +1,4 @@
-name: Publish
+name: Build
 
 on:
   pull_request:
@@ -12,6 +12,8 @@ jobs:
   build:
     name: "Build Project"
     runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
         with:
