@@ -28,6 +28,7 @@ jobs:
           cache: 'npm'
       - run: git config user.name "bump-bot"
       - run: git config user.email "bump-bot@bump.bot"
-      - run: CREATED_TAG=$(npm version ${{ inputs.tag }})
-      - run: git push origin $CREATED_TAG
+      - run: |
+          CREATED_TAG=$(npm version ${{ inputs.tag }})
+          git push origin $CREATED_TAG
 
